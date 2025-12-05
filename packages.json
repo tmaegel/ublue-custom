@@ -1,13 +1,38 @@
 {
   "include": [
+    "bash-completion",
+    "bat",
+    "curl",
+    "direnv",
+    "fd-find",
+    "fzf",
+    "gcc",
+    "git",
+    "git-delta",
     "gnupg2",
+    "htop",
+    "jq",
     "libnotify",
+    "net-tools",
+    "netcat",
     "oathtool",
     "pass",
     "pass-otp",
+    "pciutils",
+    "pre-commit",
+    "ptyxis",
+    "restic",
+    "ripgrep",
+    "rsync",
+    "tldr",
     "tmux",
+    "unzip",
+    "vim",
+    "wget",
+    "wl-clipboard",
     "wl-copy",
-    "wl-clipboard"
+    "zip",
+    "zoxide"
   ],
-  "exclude": ["nano", "just"]
+  "exclude": []
 }

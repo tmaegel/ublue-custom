@@ -3,5 +3,4 @@
 set -ouex pipefail
 
 /ctx/packages.sh
-
-# systemctl enable podman.socket
+/ctx/systemd.sh
