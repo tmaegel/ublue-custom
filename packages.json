@@ -9,5 +9,5 @@
     "wl-copy",
     "wl-clipboard"
   ],
-  "exclude": ["nano"]
+  "exclude": ["nano", "just"]
 }
