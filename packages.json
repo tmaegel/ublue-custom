@@ -1,0 +1,13 @@
+{
+  "include": [
+    "gnupg2",
+    "libnotify",
+    "oathtool",
+    "pass",
+    "pass-otp",
+    "tmux",
+    "wl-copy",
+    "wl-clipboard"
+  ],
+  "exclude": ["nano"]
+}
