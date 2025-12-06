@@ -4,8 +4,6 @@ set -ouex pipefail
 
 /ctx/packages.sh
 
-/ctx/gnome-extensions.sh
-
 /ctx/docker.sh
 
 /ctx/vscode.sh
