@@ -2,6 +2,8 @@
 
 set -ouex pipefail
 
+echo "::group:: ===$(basename "$0")==="
+
 # Validate packages.json before attempting to parse it
 # This ensures builds fail fast if the JSON is malformed
 if ! jq empty /ctx/packages.json 2>/dev/null; then
@@ -29,3 +31,5 @@ if [[ "${#EXCLUDED_PACKAGES[@]}" -gt 0 ]]; then
 else
     echo "No packages to remove."
 fi
+
+echo "::endgroup::"

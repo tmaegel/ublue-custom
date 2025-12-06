@@ -3,7 +3,8 @@ FROM scratch AS ctx
 COPY build_files /
 COPY packages.json /
 
-FROM ghcr.io/ublue-os/silverblue-main:latest
+# FROM ghcr.io/ublue-os/silverblue-main:latest
+FROM quay.io/fedora-ostree-desktops/silverblue:43
 
 COPY system_files /
 

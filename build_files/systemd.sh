@@ -2,5 +2,9 @@
 
 set -ouex pipefail
 
+echo "::group:: ===$(basename "$0")==="
+
+systemctl enable docker.socket
 systemctl enable podman.socket
-systemctl enable flatpak-preinstall.service
+
+echo "::endgroup::"
