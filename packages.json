@@ -27,6 +27,8 @@
     "pass",
     "pass-otp",
     "pciutils",
+    "podman-compose",
+    "podman-docker",
     "ptyxis",
     "restic",
     "ripgrep",
