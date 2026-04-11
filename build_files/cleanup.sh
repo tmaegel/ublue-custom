@@ -4,9 +4,19 @@ set -eoux pipefail
 
 echo "::group:: ===$(basename "$0")==="
 
-rm /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:phracek:PyCharm.repo
-rm /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo
-rm /etc/yum.repos.d/rpmfusion-nonfree-steam.repo
+# Disable all COPR repos (should already be disabled by helpers, but ensure)
+for i in /etc/yum.repos.d/_copr:*.repo; do
+    if [[ -f "$i" ]]; then
+        sed -i 's@enabled=1@enabled=0@g' "$i"
+    fi
+done
+
+# Disable RPM Fusion repos
+for i in /etc/yum.repos.d/rpmfusion-*.repo; do
+    if [[ -f "$i" ]]; then
+        sed -i 's@enabled=1@enabled=0@g' "$i"
+    fi
+done
 
 # Add the Flathub flatpak remote and remove the Fedora flatpak remote
 flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
