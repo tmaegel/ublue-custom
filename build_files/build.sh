@@ -4,7 +4,7 @@ set -ouex pipefail
 
 /ctx/packages.sh
 
-/ctx/docker.sh
+/ctx/tailscale.sh
 
 /ctx/vscode.sh
 
