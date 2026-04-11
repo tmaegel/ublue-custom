@@ -7,14 +7,14 @@ echo "::group:: ===$(basename "$0")==="
 # Disable all COPR repos (should already be disabled by helpers, but ensure)
 for i in /etc/yum.repos.d/_copr:*.repo; do
     if [[ -f "$i" ]]; then
-        sed -i 's@enabled=1@enabled=0@g' "$i"
+        sed -i 's/^enabled=1/enabled=0/g' "$i"
     fi
 done
 
 # Disable RPM Fusion repos
 for i in /etc/yum.repos.d/rpmfusion-*.repo; do
     if [[ -f "$i" ]]; then
-        sed -i 's@enabled=1@enabled=0@g' "$i"
+        sed -i 's/^enabled=1/enabled=0/g' "$i"
     fi
 done
 
