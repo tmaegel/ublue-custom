@@ -1,12 +1,13 @@
 # Allow build scripts to be referenced without being copied into the final image
 FROM scratch AS ctx
+
 COPY build_files /
 COPY packages.json /
 
-# FROM ghcr.io/ublue-os/silverblue-main:latest
 FROM quay.io/fedora-ostree-desktops/silverblue:43
 
-COPY system_files /
+# @todo: Uncomment if there are system files that need to be copied into the image.
+# COPY system_files /
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
