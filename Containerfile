@@ -1,10 +1,12 @@
+ARG FEDORA_MAJOR_VERSION=43
+
 # Allow build scripts to be referenced without being copied into the final image
 FROM scratch AS ctx
 
 COPY build_files /
 COPY packages.json /
 
-FROM quay.io/fedora-ostree-desktops/silverblue:43
+FROM quay.io/fedora-ostree-desktops/silverblue:${FEDORA_MAJOR_VERSION}
 
 # @todo: Uncomment if there are system files that need to be copied into the image.
 # COPY system_files /
