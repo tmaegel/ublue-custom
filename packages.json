@@ -33,6 +33,7 @@
     "restic",
     "ripgrep",
     "rsync",
+    "tailscale",
     "tcpdump",
     "tldr",
     "tmux",

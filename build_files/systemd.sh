@@ -5,5 +5,6 @@ set -ouex pipefail
 echo "::group:: ===$(basename "$0")==="
 
 systemctl enable podman.socket
+systemctl enable tailscaled.service
 
 echo "::endgroup::"
