@@ -6,6 +6,8 @@ set -ouex pipefail
 
 /ctx/vscode.sh
 
+/ctx/tailscale.sh
+
 /ctx/systemd.sh
 
 /ctx/cleanup.sh
