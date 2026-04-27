@@ -9,7 +9,7 @@ COPY packages.json /
 FROM quay.io/fedora-ostree-desktops/silverblue:${FEDORA_MAJOR_VERSION}
 
 # @todo: Uncomment if there are system files that need to be copied into the image.
-# COPY system_files /
+COPY system_files /
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
